@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AesthetiX — Premium Fitness Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     LANDING PAGE
+     ═══════════════════════════════════════════════════════════════ -->
+<div id="landing-page">
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <img src="./images/logo.png" alt="AesthetiX Logo" onerror="this.style.display='none'">
+        <span>AesthetiX</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#transformations">Transformations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-login" onclick="showLoginModal()">Login</button>
+        <button class="btn btn-primary btn-sm" onclick="launchApp()">Get Started</button>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Now in Open Beta — Join 2,000+ lifters
+          </div>
+          <h1 class="hero-title">
+            Transform Your<br><span class="gradient">Physique in 8 Weeks</span>
+          </h1>
+          <p class="hero-subtitle">
+            Track every rep, monitor your progress with photos, and follow a scientifically designed
+            PPL split — all in one premium offline-first web app.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-lg" onclick="launchApp()">
+              🚀 Get Started Free
+            </button>
+            <button class="btn btn-outline btn-lg" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+              Learn More →
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <div class="hero-glow"></div>
+            <img src="./images/hero.png" alt="Aesthetic Bodybuilder" onerror="this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative;z-index:2&quot;>💪</div>'">
+            <div class="stat-badge badge-1">
+              <div class="stat-badge-icon">🗓️</div>
+              <div class="stat-badge-text">
+                <strong>7</strong>
+                <span>Workout Days</span>
+              </div>
+            </div>
+            <div class="stat-badge badge-2">
+              <div class="stat-badge-icon">🏋️</div>
+              <div class="stat-badge-text">
+                <strong>50+</strong>
+                <span>Exercises</span>
+              </div>
+            </div>
+            <div class="stat-badge badge-3">
+              <div class="stat-badge-icon">💰</div>
+              <div class="stat-badge-text">
+                <strong>₹499</strong>
+                <span>/Year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features section" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything You Need to Build Your Best Physique</h2>
+      <p class="section-subtitle">Designed by lifters, for lifters. Every feature is crafted to help you stay consistent and reach your goals.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h3>Smart Workout Tracker</h3>
+          <p>Log every set, rep, and weight with an intuitive interface designed for the gym floor. Never lose track of your progress.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Progress Analytics</h3>
+          <p>Visualize your body weight trend over weeks with beautiful charts. See the data behind your transformation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Photo Check-ins</h3>
+          <p>Capture front, side, and back photos each week. Compare them side-by-side to see visual changes over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Personalized Split</h3>
+          <p>Follow a professionally designed 7-day training split optimized for hypertrophy and balanced development.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📴</div>
+          <h3>Offline First</h3>
+          <p>Works without internet. All your data is stored locally on your device — perfect for gym basements with no signal.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☁️</div>
+          <h3>Cloud Sync</h3>
+          <p>Export and import your data as JSON backups. Never lose your training history, even when switching devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformations Section -->
+  <section class="transformations section" id="transformations">
+    <div class="container">
+      <h2 class="section-title">Real Transformations, Real Results</h2>
+      <p class="section-subtitle">These members committed to the AesthetiX program and achieved incredible results in just 8 weeks.</p>
+      <div class="transform-grid">
+        <div class="transform-card">
+          <img src="./images/transform1.png" alt="Arjun's Transformation" onerror="this.outerHTML='<div style=&quot;width:100%;height:280px;background:linear-gradient(135deg,rgba(109,40,217,0.2),rgba(6,182,212,0.1));display:flex;align-items:center;justify-content:center;font-size:4rem&quot;>🔥</div>'">
+          <div class="transform-info">
+            <h4>Arjun's Journey</h4>
+            <p>Lost 8kg in 8 weeks while maintaining muscle mass through strategic training and nutrition.</p>
+            <span class="transform-badge">-8 kg • 8 weeks</span>
+          </div>
+        </div>
+        <div class="transform-card">
+          <img src="./images/transform2.png" alt="Karan's Transformation" onerror="this.outerHTML='<div style=&quot;width:100%;height:280px;background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(109,40,217,0.1));display:flex;align-items:center;justify-content:center;font-size:4rem&quot;>💪</div>'">
+          <div class="transform-info">
+            <h4>Karan's Gains</h4>
+            <p>Gained 5kg of lean muscle by following the hypertrophy-focused split with progressive overload.</p>
+            <span class="transform-badge">+5 kg lean • 8 weeks</span>
+          </div>
+        </div>
+        <div class="transform-card">
+          <img src="./images/transform3.png" alt="Priya's Transformation" onerror="this.outerHTML='<div style=&quot;width:100%;height:280px;background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(109,40,217,0.1));display:flex;align-items:center;justify-content:center;font-size:4rem&quot;>⚡</div>'">
+          <div class="transform-info">
+            <h4>Priya's Recomposition</h4>
+            <p>Complete body recomposition — lost fat and built muscle simultaneously with disciplined tracking.</p>
+            <span class="transform-badge">Recomp • 8 weeks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Honest Pricing</h2>
+      <p class="section-subtitle">Choose the plan that fits your goals.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+        <!-- Pro Plan -->
+        <div class="pricing-card" style="margin-top: 0;">
+          <div class="pricing-popular" style="background: var(--primary);">PRO</div>
+          <div class="pricing-amount">₹499 <span>/ year</span></div>
+          <p class="pricing-period">That's just ₹41/month - less than one cheat meal 🍔</p>
+          <ul class="pricing-features">
+            <li><span class="pricing-check">✓</span> Full 7-day training split</li>
+            <li><span class="pricing-check">✓</span> Smart workout logging</li>
+            <li><span class="pricing-check">✓</span> Progress photo tracking</li>
+            <li><span class="pricing-check">✓</span> Body weight analytics</li>
+            <li><span class="pricing-check">✓</span> Exercise library with GIFs</li>
+            <li><span class="pricing-check">✓</span> Offline mode - no internet needed</li>
+          </ul>
+          <button class="btn btn-primary btn-lg" style="width:100%; margin-top: 20px;" onclick="window.open('https://rzp.io/rzp/eg3ZHbwf', '_blank')">
+            Get Pro - ₹499
+          </button>
+        </div>
+
+        <!-- Lifetime Plan -->
+        <div class="pricing-card" style="margin-top: 0; border: 2px solid #eab308; background: linear-gradient(145deg, rgba(234,179,8,0.05) 0%, transparent 100%);">
+          <div class="pricing-popular" style="background: #eab308; color: #000;">LIFETIME ACCESS</div>
+          <div class="pricing-amount" style="color: #eab308;">₹799 <span>/ forever</span></div>
+          <p class="pricing-period">Pay once, lift forever 🏆</p>
+          <ul class="pricing-features">
+            <li><span class="pricing-check" style="color: #eab308;">✓</span> <strong>Everything in Pro</strong></li>
+            <li><span class="pricing-check" style="color: #eab308;">✓</span> Lifetime Free App Access</li>
+            <li><span class="pricing-check" style="color: #eab308;">✓</span> Never pay a subscription again</li>
+            <li><span class="pricing-check" style="color: #eab308;">✓</span> All future updates included</li>
+            <li><span class="pricing-check" style="color: #eab308;">✓</span> Priority support</li>
+          </ul>
+          <button class="btn btn-lg" style="width:100%; background: #eab308; color: #000; margin-top: 20px;" onclick="window.open('https://rzp.io/rzp/cHTLyxKb', '_blank')">
+            Get Lifetime - ₹799
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Loved by Lifters</h2>
+      <p class="section-subtitle">Real reviews from real members who transformed their physique with AesthetiX.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Finally an app that doesn't overwhelm you with features. The split is perfect, the tracker is fast, and the photo check-ins keep me accountable. Down 8kg in 8 weeks!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AR</div>
+            <div>
+              <div class="testimonial-name">Arjun R.</div>
+              <div class="testimonial-role">Software Engineer, Bangalore</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As a woman in the gym, I felt lost without a proper plan. AesthetiX gave me structure and confidence. The progress photos are so motivating — I can actually SEE the changes!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PS</div>
+            <div>
+              <div class="testimonial-name">Priya S.</div>
+              <div class="testimonial-role">Marketing Manager, Mumbai</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I've tried MyFitnessPal, Strong, and JEFIT. Nothing comes close to AesthetiX for simplicity. The offline mode is clutch — my gym has zero signal. Gained 5kg of lean muscle!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KM</div>
+            <div>
+              <div class="testimonial-name">Karan M.</div>
+              <div class="testimonial-role">College Student, Delhi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Got questions? We've got answers.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Who is AesthetiX for?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>AesthetiX is for anyone — beginner to intermediate — who wants a structured 8-week hypertrophy program. Whether you're looking to build muscle, lose fat, or do a body recomposition, our split has you covered. You need access to a gym with basic equipment (barbells, dumbbells, cables, machines).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need a gym membership?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, the program is designed for a standard commercial gym. You'll need access to barbells, dumbbells, cable machines, and basic machines like leg press, lat pulldown, etc. A home gym with the right equipment works too!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What happens after 8 weeks?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>After 8 weeks, you can restart the cycle with heavier weights (progressive overload). The split is designed to be repeatable — each cycle you'll be stronger. Your photo check-ins will show visible progress over multiple cycles.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What's the refund policy?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer a 30-day money back guarantee, no questions asked. If AesthetiX isn't for you, just email us and we'll refund you immediately. We believe in our product — and we want you to believe in it too.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="./images/logo.png" alt="AesthetiX" onerror="this.style.display='none'">
+          AesthetiX
+        </div>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#" onclick="showLoginModal();return false;">Login</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        © 2026 AesthetiX. Built with 💜 for the fitness community. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box" style="position:relative;">
+    <button class="modal-close" onclick="hideLoginModal()">✕</button>
+    <h2>Welcome Back 👋</h2>
+    <p>Log in to your AesthetiX account</p>
+    <label>Email</label>
+    <input type="email" placeholder="you@example.com">
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+    <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="hideLoginModal();launchApp();">Log In</button>
+    <p style="text-align:center;margin-top:16px;font-size:0.85rem;">
+      Don't have an account? <a href="#" style="color:var(--primary-light);font-weight:600;" onclick="hideLoginModal();launchApp();return false;">Sign up free →</a>
+    </p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FITNESS APP
+     ═══════════════════════════════════════════════════════════════ -->
+<div id="app-page">
+  <div class="app-layout">
+
+    <!-- Sidebar (Desktop) -->
+    <aside class="app-sidebar">
+      <div class="sidebar-brand">
+        <img src="./images/logo.png" alt="AesthetiX" onerror="this.style.display='none'">
+        <span>AesthetiX</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-item active" onclick="navigateTo('dashboard')" data-page="dashboard">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('today')" data-page="today">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Today
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('split')" data-page="split">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Split
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('progress')" data-page="progress">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Progress
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('photos')" data-page="photos">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Photos
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('notes')" data-page="notes">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Notes
+        </button>
+        <button class="sidebar-item" style="display:none;" onclick="navigateTo('library')" data-page="library">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Library
+        </button>
+        <button class="sidebar-item" onclick="navigateTo('settings')" data-page="settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </button>
+      </nav>
+      <div class="sidebar-version">AesthetiX v1.0.0</div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+
+      <!-- ═══ DASHBOARD ═══ -->
+      <div class="app-page-section active" id="page-dashboard">
+        <div class="app-main-header">
+          <h1>Dashboard</h1>
+          <p>Your fitness journey at a glance</p>
+        </div>
+        <div class="welcome-card">
+          <h2>Welcome back, Athlete! 🔥</h2>
+          <p>You're in Week <span id="currentWeek">1</span> of your 8-week program. Keep pushing — consistency beats perfection.</p>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Today's Workout</div>
+            <div class="kpi-value" id="kpi-workout" style="font-size:1.3rem;">—</div>
+            <div class="kpi-sub" id="kpi-day-name"></div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Completion</div>
+            <div class="kpi-value" id="kpi-completion">0%</div>
+            <div class="kpi-sub">Sets completed today</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Latest Weight</div>
+            <div class="kpi-value" id="kpi-weight">— kg</div>
+            <div class="kpi-sub">Last logged entry</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Photos Taken</div>
+            <div class="kpi-value" id="kpi-photos">0</div>
+            <div class="kpi-sub">Across all weeks</div>
+          </div>
+        </div>
+        <div class="quick-actions">
+          <button class="btn btn-primary btn-sm" onclick="navigateTo('today')">🏋️ Start Workout</button>
+          <button class="btn btn-outline btn-sm" onclick="navigateTo('progress')">📊 Log Weight</button>
+          <button class="btn btn-outline btn-sm" onclick="navigateTo('photos')">📸 Photo Check-in</button>
+          <button class="btn btn-sm" onclick="showToast('AI Gym Trainer coming soon! 🚀', 'info')" style="background: linear-gradient(45deg, #7c3aed, #ec4899); color: white; border: none; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);">🤖 AI Coach (Coming Soon)</button>
+        </div>
+      </div>
+
+      <!-- ═══ TODAY ═══ -->
+      <div class="app-page-section" id="page-today">
+        <div class="app-main-header">
+          <h1>Today's Workout</h1>
+          <p id="today-subtitle">Loading...</p>
+        </div>
+        <div id="today-workout-content"></div>
+        <button class="btn btn-primary" style="margin-top:16px;" onclick="saveTodaysWorkout()">💾 Save Workout</button>
+      </div>
+
+      <!-- ═══ SPLIT ═══ -->
+      <div class="app-page-section" id="page-split">
+        <div class="app-main-header">
+          <h1>Training Split</h1>
+          <p>Your complete 7-day program — tap any day to expand</p>
+        </div>
+        <div id="split-content"></div>
+      </div>
+
+      <!-- ═══ PROGRESS ═══ -->
+      <div class="app-page-section" id="page-progress">
+        <div class="app-main-header">
+          <h1>Progress Tracker</h1>
+          <p>Log your body weight and track trends over time</p>
+        </div>
+        <div class="card">
+          <div class="weight-input-row">
+            <div class="input-group">
+              <label>Date</label>
+              <input type="date" id="weightDate">
+            </div>
+            <div class="input-group">
+              <label>Body Weight (kg)</label>
+              <input type="number" id="weightValue" step="0.1" placeholder="e.g. 72.5">
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="saveWeight()">Save</button>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px;">
+          <h3 style="margin-bottom:16px;font-weight:700;">Weight Trend</h3>
+          <canvas id="progressChart"></canvas>
+        </div>
+        <div class="card" style="margin-top:16px;" id="weight-history-card">
+          <h3 style="margin-bottom:16px;font-weight:700;">History</h3>
+          <div id="weight-history"></div>
+        </div>
+      </div>
+
+      <!-- ═══ PHOTOS ═══ -->
+      <div class="app-page-section" id="page-photos">
+        <div class="app-main-header">
+          <h1>Photo Check-ins</h1>
+          <p>Capture your transformation week by week</p>
+        </div>
+        <div class="week-selector" id="photo-week-selector"></div>
+        <div class="photo-grid" id="photo-grid"></div>
+      </div>
+
+      <!-- ═══ NOTES ═══ -->
+      <div class="app-page-section" id="page-notes">
+        <div class="app-main-header">
+          <h1>Training Notes</h1>
+          <p>Journal your thoughts, energy levels, and progress</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:12px;font-weight:700;">📝 General Notes</h3>
+          <textarea class="notes-area" id="generalNotes" placeholder="Write your overall training thoughts, diet notes, how you're feeling..."></textarea>
+          <button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="saveNotes('general')">Save Notes</button>
+        </div>
+        <div class="card" style="margin-top:16px;">
+          <h3 style="margin-bottom:12px;font-weight:700;">📅 Day-Specific Notes</h3>
+          <select id="noteDaySelect" style="width:100%;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);margin-bottom:12px;font-size:0.95rem;">
+            <option value="day1">Day 1 — Shoulders + Triceps + Abs</option>
+            <option value="day2">Day 2 — Back + Biceps</option>
+            <option value="day3">Day 3 — Legs + Glute + Abs</option>
+            <option value="day4">Day 4 — Chest + Shoulders</option>
+            <option value="day5">Day 5 — Arms + Abs</option>
+            <option value="day6">Day 6 — Full Upper Pump</option>
+            <option value="day7">Day 7 — Rest</option>
+          </select>
+          <textarea class="notes-area" id="dayNotes" placeholder="Notes for this specific training day..." style="min-height:120px;"></textarea>
+          <button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="saveDayNote()">Save Day Note</button>
+        </div>
+      </div>
+
+      <!-- ═══ LIBRARY ═══ -->
+      <div class="app-page-section" id="page-library">
+        <div class="app-main-header">
+          <h1>Exercise Library</h1>
+          <p>All exercises in your program — search and upload GIFs</p>
+        </div>
+        <div class="search-wrapper">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-input" id="librarySearch" placeholder="Search exercises..." oninput="filterLibrary()">
+        </div>
+        <div id="library-list"></div>
+      </div>
+
+      <!-- ═══ SETTINGS ═══ -->
+      <div class="app-page-section" id="page-settings">
+        <div class="app-main-header">
+          <h1>Settings</h1>
+          <p>Manage your account and data</p>
+        </div>
+        <div class="settings-card">
+          <h3>🎫 Subscription Status</h3>
+          <p><span id="sub-status-badge" class="sub-status">...</span></p>
+          <p id="sub-status-desc" style="margin-top:8px;">...</p>
+          <button id="sub-manage-btn" class="btn btn-primary btn-sm" style="margin-top:12px; display:none;">💎 Upgrade Plan</button>
+        </div>
+        
+
+<div class="settings-card" id="unlock-card" style="display: ${userTier === 0 ? 'block' : 'none'}">
+  <h3>🔓 Activation Code</h3>
+  <p>Received a code after payment? Enter it below.</p>
+  <div style="display:flex;gap:10px;margin-top:10px;">
+    <input type="text" id="activationCode" class="form-input" placeholder="PRO-XXXX-YYYY" style="flex:1;">
+    <button class="btn btn-primary btn-sm" onclick="activatePremium()">Unlock</button>
+  </div>
+</div>
+<script src="js/app.js" defer></script>
+
+
+<div class="settings-card">
+          <h3>💾 Data Management</h3>
+          <p>Export your data as a JSON backup or import from a previous backup.</p>
+          <div class="settings-actions">
+            <button class="btn btn-outline btn-sm" onclick="exportData()">📤 Export Backup</button>
+            <label class="btn btn-outline btn-sm" style="cursor:pointer;">
+              📥 Import Backup
+              <input type="file" accept=".json" style="display:none;" onchange="importData(event)">
+            </label>
+          </div>
+        </div>
+        <div class="settings-card">
+          <h3>⚠️ Danger Zone</h3>
+          <p>Reset all data back to factory defaults. This cannot be undone.</p>
+          <div class="settings-actions">
+            <button class="btn btn-danger btn-sm" onclick="factoryReset()">🗑️ Factory Reset</button>
+          </div>
+        </div>
+        <div class="settings-card">
+          <h3>🏠 Navigation</h3>
+          <p>Go back to the AesthetiX landing page.</p>
+          <div class="settings-actions">
+            <button class="btn btn-outline btn-sm" onclick="goToLanding()">← Back to Landing</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <div class="bottom-tab-bar">
+    <div class="tab-bar-inner">
+      <button class="tab-item active" onclick="navigateTo('dashboard')" data-page="dashboard">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Home
+      </button>
+      <button class="tab-item" onclick="navigateTo('today')" data-page="today">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Today
+      </button>
+      <button class="tab-item" onclick="navigateTo('split')" data-page="split">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Split
+      </button>
+      <button class="tab-item" onclick="navigateTo('progress')" data-page="progress">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Progress
+      </button>
+      <button class="tab-item" onclick="navigateTo('photos')" data-page="photos">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Photos
+      </button>
+      <button class="tab-item" onclick="navigateTo('settings')" data-page="settings">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        More
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>

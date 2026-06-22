@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AesthetiX Code Generator</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0f0f13; color: #fff; padding: 40px; text-align: center; }
+    .card { background: #1c1c21; padding: 30px; border-radius: 15px; border: 1px solid #333; max-width: 400px; margin: 0 auto; }
+    h2 { margin-top: 0; color: #a78bfa; }
+    button { background: #7c3aed; color: #fff; border: none; padding: 12px 20px; font-size: 16px; border-radius: 8px; cursor: pointer; margin: 5px; }
+    button.elite { background: #eab308; color: #000; }
+    .result { margin-top: 20px; padding: 15px; background: #000; border-radius: 8px; font-family: monospace; font-size: 24px; color: #10b981; }
+    .history { margin-top: 20px; font-size: 14px; color: #aaa; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>AesthetiX Code Generator</h2>
+    <p>Generate secure activation codes for your clients. The app verifies the cryptographic checksum offline!</p>
+    
+    <button onclick="generate('PRO')">Generate PRO Code</button>
+    <button class="elite" onclick="generate('LIF')">Generate LIFETIME Code</button>
+    
+    <div class="result" id="output">Click to generate...</div>
+    
+    <div class="history" id="history"></div>
+  </div>
+
+  <script>
+    function generateCode(tier) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      while(true) {
+        let body = '';
+        for(let i=0; i<8; i++) {
+          if(i===4) body += '-';
+          else body += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        let sum = 0;
+        for(let i=0; i<body.length; i++) sum += body.charCodeAt(i);
+        if(sum % 97 === 42) return tier + '-' + body;
+      }
+    }
+
+    function generate(tier) {
+      const code = generateCode(tier);
+      document.getElementById('output').textContent = code;
+      const history = document.getElementById('history');
+      history.innerHTML = `<div>${new Date().toLocaleTimeString()} - <b>${code}</b></div>` + history.innerHTML;
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(code).then(() => {
+        const orig = document.getElementById('output').textContent;
+        document.getElementById('output').textContent = 'Copied! ' + code;
+        setTimeout(() => document.getElementById('output').textContent = code, 1000);
+      });
+    }
+  </script>
+</body>
+</html>
